@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en" class="h-100">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Dark Mode Switch</title>
+    <meta
+      name="description"
+      content="Add a dark-mode theme toggle with a Bootstrap Custom Switch"
+    />
+
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2280%22>🌓</text></svg>"
+    />
+
+    <meta property="og:site_name" content="Dark Mode Switch" />
+    <meta
+      property="og:image"
+      content="https://repository-images.githubusercontent.com/194995309/38db8f80-9db7-11e9-998f-43f2a26d9e0b"
+    />
+    <meta property="og:title" content="dark-mode-switch" />
+    <meta
+      property="og:description"
+      content="Add a dark-mode theme toggle with a Bootstrap Custom Switch"
+    />
+    <meta
+      property="og:url"
+      content="https://coliff.github.io/dark-mode-switch/"
+    />
+    <link rel="author" href="https://christianoliff.com/" />
+    <meta name="twitter:creator" content="@christianoliff" />
+    <meta name="monetization" content="$ilp.uphold.com/Epqzn3YGr2MB" />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- IE 11 polyfill for CSS and Custom Properties -->
+    <script nomodule>
+      window.MSInputMethodContext &&
+        document.documentMode &&
+        document.write(
+          '<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-ie11@5/css/bootstrap-ie11.min.css"><script src="https://cdn.jsdelivr.net/npm/ie11-custom-properties@4/ie11CustomProperties.min.js"><\/script>'
+        );
+    </script>
+
+    <link rel="stylesheet" href="dark-mode.css" />
+  </head>
+
+  <body class="bg-white text-center h-100">
+    <div class="container d-flex p-3 mx-auto w-100 flex-column">
+      <header class="mb-auto">
+        <div class="float-md-start fw-bold fs-5">Dark Mode Switch</div>
+        <nav class="nav justify-content-center float-md-end">
+          <a class="nav-link active">Home</a>
+          <div class="nav-link">
+            <div class="form-check form-switch">
+              <input type="checkbox" class="form-check-input" id="darkSwitch" />
+              <label class="custom-control-label" for="darkSwitch"
+                >Dark&light</label
+              >
+            </div>
+
+            <script src="dark-mode-switch.min.js"></script>
+          </div>
+        </nav>
+      </header>
+    </div>
+    <div class="container-two mt-4">
+      <form id="form" class="w-50 mx-auto mb-5">
+        <h2 class="text-center fs-3">Products</h2>
+        <div class="mb-3">
+          <label for="name" class="form-label">Nomi</label>
+          <input
+            type="text"
+            class="form-control"
+            id="name"
+            placeholder="Nomini kiriting..."
+          />
+        </div>
+        <div class="mb-3">
+          <label for="price" class="form-label">Narxi</label>
+          <input
+            type="number"
+            class="form-control"
+            id="price"
+            placeholder="Narxini kiriting..."
+          />
+        </div>
+        <div class="mb-3">
+          <label for="status" class="form-label" id="status">Status</label>
+          <select class="form-select" aria-label="Default select example">
+            <option selected value="">Statusni tanlang</option>
+            <option value="active">Active</option>
+            <option value="inactive">Inactive</option>
+          </select>
+        </div>
+        <div class="mb-3">
+          <label for="description" class="form-label">Izoh</label>
+          <textarea
+            style="resize: none"
+            class="form-control"
+            id="description"
+            placeholder="Izoh kiriting..."
+          ></textarea>
+        </div>
+        <button id="btn" class="btn btn-success w-100">Saqlash</button>
+      </form>
+      <table class="table table-striped">
+        <thead id="thead">
+          <tr>
+            <th>No</th>
+            <th>Nomi</th>
+            <th>Narxi</th>
+            <th>Status</th>
+            <th>Izoh</th>
+            <th>Yaratilgan vaqti</th>
+            <th>O'zgartirilgan vaqti</th>
+            <th>Amallar</th>
+          </tr>
+        </thead>
+        <tbody id="tbody"></tbody>
+      </table>
+    </div>
+
+    <script type="module" src="./js/index.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
